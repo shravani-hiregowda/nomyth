@@ -1,0 +1,29 @@
+.categoriesList {
+    display: none;
+    position: absolute; /* Makes it a popup */
+    top: 60px; /* Adjust to position below the header */
+    left: 20px; /* Adjust based on where you want it to appear */
+    width: 200px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000; /* Ensures it appears above other elements */
+    color: white;
+}
+
+.categoriesList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.categoriesList li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.categoriesList li:hover {
+    background-color: teal;
+}
