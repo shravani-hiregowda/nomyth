@@ -1,30 +1,54 @@
-.categoriesList {
-    display: none;
-    position: absolute; /* Makes it a popup */
-    top: 60px; /* Adjust to position below the header */
-    left: 20px; /* Adjust based on where you want it to appear */
-    width: 200px;
-    background-color: #1f1f1f;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 1000; 
-    color: white;
+/* Container for the popup */
+.categoriesPopup {
+  position: absolute;
+  right: 10px;
+  width: 350px; /* Adjust for number of items */
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-top: 35px;
+  display: none;
+
 }
 
-.categoriesList ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 100px;
-    gap: 5px
+
+.categoriesPopup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Items wrap in grid-like layout */
+  justify-content: space-between;
 }
 
-.categoriesList li {
-    padding: 5px 0;
-    cursor: pointer;
+/* Individual list items */
+.categoriesPopup li {
+  text-align: center;
+  margin: 10px;
+  width: 80px; /* Size for each icon block */
+  
 }
 
-.categoriesList li:hover {
-    background-color: teal;
+/* Category text */
+.categoriesPopup li span {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+
 }
+
+.categoriesPopup li :hover {
+  color: #219EBC;
+  
+}
+
+/* Link styling */
+.categoriesPopup li a {
+  text-decoration: none;
+  color: inherit;
+
+}
+

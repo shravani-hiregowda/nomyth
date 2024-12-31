@@ -6,6 +6,7 @@
   <title>NoMyth - Tech Hub</title>
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="headerFooter.css">
+  <link rel="stylesheet" href="categories.css">
 </head>
 <body>
   <header>
@@ -15,31 +16,50 @@
       </div>
       <ul class="menu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#categories" onclick="categoriesList()">Categories</a></li>
-        <li><a href="hackathons.html">Hackathons</a></li>
+        <li>
+          <a href="#categories" onclick="toggleCategories(event)">Categories</a>
+        </li>
+        <li><a href="#hackathons">Hackathons</a></li>
         <li><a href="#courses">Courses</a></li>
       </ul>
     </nav>
   </header>
   
-    <nav class="navbar">
-        <ul class="menu">
-            <li><a href="#categories" onclick="categoriesList()">Categories</a></li>
-        </ul>
-    </nav>
- 
-    <div class="categoriesList">
-      <ul>
-        <li><button onclick="loadFeed('web')">Web Development</button></li>
-        <li><button onclick="loadFeed('mobile')">Mobile Development</button></li>
-        <li><button onclick="loadFeed('ai')">AI</button></li>
-        <li><button onclick="loadFeed('cloud')">Cloud Computing</button></li>
-        <li><button onclick="loadFeed('cyber')">Cyber Security</button></li>
-        <li><button onclick="loadFeed('iot')">Internet of Things</button></li>
-      </ul>
-    </div>
-    
- 
+  <div class="categoriesPopup" id="categoriesPopup">
+    <ul>
+      <li>
+        <a href="#" onclick="loadFeed(ai)">
+          <span>AI</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadFeed('web')">          
+          <span>Web Development</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadFeed('mobile')">
+          <span>Mobile Development</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadFeed('cloud')">          
+          <span>Cloud Computing</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadFeed('cyber')">
+          <span>Cyber Security</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="loadFeed('iot')">          
+          <span>IoT</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
   
   <div class="content">
     <div class="heading">

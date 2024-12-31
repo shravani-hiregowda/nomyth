@@ -9,13 +9,12 @@ header {
   width: 100%;
   z-index: 1000;
   
-  
 }
 footer {
     background-color: #1f1f1f; 
     color: #fff; 
     padding: 40px 20px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
   }
   
@@ -119,7 +118,7 @@ footer {
   .footer-bottom {
     text-align: center;
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 14px;
     color: #bbb;
   }
   
@@ -132,13 +131,12 @@ footer {
     max-width: 1200px; 
     margin: 0 auto; 
     gap: 30px;
-    padding: 20px;
+
   }
   
   .content > div {
 
     gap: 40px;
-    justify-content: space-between;
   }
   
   .content1, .content2, .content3, .content4, .content5, .content6 {
@@ -147,5 +145,23 @@ footer {
     width: 250px;
     flex: 0 0 auto;
     margin: 21px;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-left, .footer-links, .footer-contact {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .social-media a {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+  }
+  
+  .footer-links ul li a, .footer-contact a, .social-media a {
+    transition: color 0.3s ease;
   }
   
