@@ -12,7 +12,6 @@ body, h1, h2, h3, p, ul, li {
   }
   
 
-
   .heading {
     display: flex;
     flex-direction: column;
@@ -96,3 +95,255 @@ body, h1, h2, h3, p, ul, li {
     background-color: #219EBC;
     color: white;
   }
+
+  /* --------------- categories ------------------- */
+  /* Container for the popup */
+.categoriesPopup {
+  position: absolute;
+  right: 10px;
+  width: 350px; /* Adjust for number of items */
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-top: 35px;
+  display: none;
+
+}
+
+
+.categoriesPopup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Items wrap in grid-like layout */
+  justify-content: space-between;
+}
+
+/* Individual list items */
+.categoriesPopup li {
+  text-align: center;
+  margin: 10px;
+  width: 80px; /* Size for each icon block */
+  
+}
+
+/* Category text */
+.categoriesPopup li span {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+
+}
+
+.categoriesPopup li :hover {
+  color: #219EBC;
+  
+}
+
+/* Link styling */
+.categoriesPopup li a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+/* --------------- categories-list ------------------- */
+.ainews, .cloudComputing, .cyber, .blockchain, .iot, .miscellaneous{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+  margin-top: 100px;
+}
+.ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8 .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
+  background-color: #17a2b8;
+  height: 250px;
+  width: 580px;
+  flex: 0 0 auto;
+  margin: 21px;
+}
+
+
+
+
+/* --------------- footer ------------------- */
+
+header {
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+footer {
+    background-color: #1f1f1f; 
+    color: #fff; 
+    padding: 40px 20px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left {
+    flex: 1;
+  }
+  
+  .footer-logo a {
+    color: #219EBC; 
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .footer-logo a:hover {
+    color: #17a2b8; 
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .footer-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-links h4 {
+    color: #219EBC; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-links ul li a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #219EBC; 
+  }
+  
+  .footer-contact {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-contact h4 {
+    color: #219EBC; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact p {
+    margin: 5px 0;
+  }
+  
+  .footer-contact a {
+    color: #fff; 
+    text-decoration: none;
+  }
+  
+  .footer-contact a:hover {
+    color: #219EBC; 
+  }
+  
+  .social-media {
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #219EBC; 
+    
+  }
+  
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 30px;
+
+  }
+  
+  .content > div {
+
+    gap: 40px;
+  }
+  
+  .content1, .content2, .content3, .content4, .content5, .content6 {
+    background-color: #17a2b8;
+    height: 150px;
+    width: 250px;
+    flex: 0 0 auto;
+    margin: 21px;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-left, .footer-links, .footer-contact {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .social-media a {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+    .ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8 .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
+      width: 450px;
+    }
+
+  }
+  
+  .footer-links ul li a, .footer-contact a, .social-media a {
+    transition: color 0.3s ease;
+  }
+  
+
+  
