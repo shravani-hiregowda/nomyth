@@ -37,11 +37,10 @@
     display: flex;
     list-style: none;
     gap: 20px;
-    margin-right: 50px;
   }
   
   .menu li {
-    margin-right: 50px;
+    margin-right: 45px;
   }
   
   .menu li a {
@@ -149,10 +148,9 @@
     right: 0px;
   }
 
-
-
-
-  
+  #check:checked ~ .btn_one {
+    display: none;
+  }
 
 
     /* --------------- categories ------------------- */
@@ -302,6 +300,11 @@
     color: white;
   }
 
+  .menu .menu-icon {
+    margin-right: 8px;
+
+  }
+
 
 /* --------------- footer ------------------- */
 
@@ -442,7 +445,7 @@ footer {
 
   /* --------------- responsive design ------------------- */
    
-  @media (max-width: 870px) {
+  @media (max-width: 872px) {
     .menu {
       display:none;
     }
@@ -450,9 +453,9 @@ footer {
     .main_box {
       display: block;
     }
-
-  
   }
+
+
 
 @media (max-width: 768px) {
   .categoriesPopup {
@@ -491,6 +494,6 @@ footer {
     margin: 0 10px;
   }
   .ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8, .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
-    width: 450px;
+    width: 300px;
   }
 }
