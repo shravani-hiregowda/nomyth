@@ -31,19 +31,7 @@ function loadFeed(category) {
         <p>Discover the world of AI, from neural networks to machine learning breakthroughs.</p>
       `;
       break;
-    case 'web':
-      content = `
-        <h2>Web Development</h2>
-        <p>Learn about the latest trends in web technologies, frameworks, and best practices.</p>
-      `;
-      break;
-    case 'mobile':
-      content = `
-        <h2>Mobile Development</h2>
-        <p>Explore innovations in mobile app development and cross-platform tools.</p>
-      `;
-      break;
-    case 'cloud':
+    case 'cloudComuting':
       content = `
         <h2>Cloud Computing</h2>
         <p>Understand how cloud computing is transforming the tech industry and enabling scalability.</p>
@@ -61,6 +49,12 @@ function loadFeed(category) {
         <p>Dive into the interconnected world of IoT and its impact on our daily lives.</p>
       `;
       break;
+      case 'miscellaneous':
+        content = `
+          <h2>Internet of Things (IoT)</h2>
+          <p>Dive into the interconnected world of IoT and its impact on our daily lives.</p>
+        `;
+        break;
     default:
       content = `<p>No content available for this category.</p>`;
   }
@@ -71,5 +65,4 @@ function loadFeed(category) {
   // Scroll to the dynamic content
   contentDiv.scrollIntoView({ behavior: 'smooth' });
 }
-
 

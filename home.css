@@ -1,48 +1,18 @@
-
-body, h1, h2, h3, p, ul, li {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+
   }
   
   body {
     background-color: #121212;
     color: white;
     font-size: 16px;
+    
   }
-  
 
-  .heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin-top: 100px; 
-    padding: 20px;
-    background-color: transparent; 
-  }
-  
-  .headline {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    line-height: 1.2;
-    margin: 10px 0;
-  }
-  
-  .subHeadline {
-    font-family: "Sans-serif", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #bbbbbb;
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-  
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,9 +27,12 @@ body, h1, h2, h3, p, ul, li {
     font-size: 24px;
     text-decoration: none;
     font-weight: bold;
-
   }
-  
+
+  .logo {
+    margin-right: 50px;
+  }
+   
   .menu {
     display: flex;
     list-style: none;
@@ -76,41 +49,127 @@ body, h1, h2, h3, p, ul, li {
     text-decoration: none;
     font-size: 18px;
   }
-  
+
   .menu li a:hover {
     color: #219EBC;
   }
-  
-  button {
-    background-color: #1c1c1c;
-    padding: 10px;
+
+  .main_box {
+    display: none;
+    position: absolute;
+    right: 5px;
+  }
+
+  .main_box .btn_one i {
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer; 
+    margin-left: 190px;
+  }
+
+  .main_box .btn_two i {
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer; 
+    padding-left: 57px;
+  }
+
+
+  .sidebar_menu {
+    position: fixed;
+    right: -225px;
+    height: 400px;
+    width: 225px;
+    background-color: #1f1f1f;
     border-radius: 5px;
-    border: 1px solid #219EBC;
+
+  }
+
+  .sidebar_menu .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #1f1f1f;
+  }
+
+  .sidebar_menu .logo a{
+    justify-content: center;
     color: #219EBC;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 45%;
+    height: 20px;
+    position: relative;
   }
-  
-  button:hover {
-    background-color: #219EBC;
+
+  .sidebar_menu_items li{
+    text-decoration: none;
     color: white;
+    font-size: 18px;
+    list-style: none;
+    line-height: 45px;
+    cursor: pointer;
+    width: 200px;
+    padding-left: 20px;
   }
 
-  /* --------------- categories ------------------- */
-  /* Container for the popup */
-.categoriesPopup {
-  position: absolute;
-  right: 10px;
-  width: 350px; /* Adjust for number of items */
-  background-color: #1f1f1f;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  margin-top: 35px;
-  display: none;
+  .sidebar_menu_items i {
+    margin-right: 10px;
+  }
 
-}
+  .sidebar_menu_items li  a {
+    color: white;
+    text-decoration: none;
+  }
 
+  .sidebar_menu_items li  a:hover {
+    color: #219EBC;
+  }
+
+  .socialMedia a i {
+    font-size: 12px;
+    margin: 0px 5px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.1;
+    padding-left: 24px;
+    margin-top: 20px;
+  }
+  .socialMedia a i:hover {
+    opacity: 1;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .sidebar_menu {
+    right: 0px;
+  }
+
+
+
+
+  
+
+
+    /* --------------- categories ------------------- */
+
+    .categoriesPopup {
+      position: absolute;
+      right: 20px;
+      top: 50px; /* Positioning it below the navbar */
+      width: 350px;
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      display: none;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }    
 
 .categoriesPopup ul {
   list-style: none;
@@ -121,12 +180,17 @@ body, h1, h2, h3, p, ul, li {
   justify-content: space-between;
 }
 
-/* Individual list items */
+
+
 .categoriesPopup li {
   text-align: center;
   margin: 10px;
-  width: 80px; /* Size for each icon block */
-  
+  width: calc(33.33% - 20px); /* Adjust width to fit three items per row */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Category text */
@@ -151,26 +215,92 @@ body, h1, h2, h3, p, ul, li {
 
 }
 
-
 /* --------------- categories-list ------------------- */
-.ainews, .cloudComputing, .cyber, .blockchain, .iot, .miscellaneous{
+.ainews, .cloudComputing, .cyber, .blockchain, .iot, .miscellaneous, .hackathons, .courses {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   margin: 20px 0;
-  margin-top: 100px;
 }
-.ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8 .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
+
+.ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8,.cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8,.hackathons1, .hackathons2, .hackathons3, .hackathons4, .hackathons5, .hackathons6, .hackathons7, .hackathons8,.courses1, .courses2, .courses3, .courses4, .courses5, .courses6, .courses7, .courses8 {
   background-color: #17a2b8;
   height: 250px;
   width: 580px;
   flex: 0 0 auto;
   margin: 21px;
+  border-radius: 2px;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  gap: 30px;
+}
 
+.content > div {
+  gap: 40px;
+}
+
+.content1, .content2, .content3, .content4, .content5, .content6 {
+  background-color: #17a2b8;
+  height: 150px;
+  width: 250px;
+  flex: 0 0 auto;
+  margin: 21px;
+}  
+  
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px; 
+  padding: 20px;
+  background-color: transparent; 
+  }
+  
+  .headline {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+  
+  .subHeadline {
+    font-family: "Sans-serif", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #bbbbbb;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  button {
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #219EBC;
+    color: #219EBC;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #219EBC;
+    color: white;
+  }
 
 
 /* --------------- footer ------------------- */
@@ -179,7 +309,7 @@ header {
   background-color: #1f1f1f;
   padding: 15px 0;
   display: flex;
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
@@ -297,53 +427,70 @@ footer {
     font-size: 14px;
     color: #bbb;
   }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; 
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    gap: 30px;
 
-  }
-  
-  .content > div {
-
-    gap: 40px;
-  }
-  
-  .content1, .content2, .content3, .content4, .content5, .content6 {
-    background-color: #17a2b8;
-    height: 150px;
-    width: 250px;
-    flex: 0 0 auto;
-    margin: 21px;
-  }
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .footer-left, .footer-links, .footer-contact {
-      text-align: center;
-      margin: 10px 0;
-    }
-    .social-media a {
-      font-size: 18px;
-      margin: 0 10px;
-    }
-    .ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8 .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
-      width: 450px;
-    }
-
-  }
-  
   .footer-links ul li a, .footer-contact a, .social-media a {
     transition: color 0.3s ease;
   }
+
+  .text {
+    margin-top: 100px;
+    font-family:  "Sans-serif", sans-serif;
+    display: flex;
+    justify-content: center;
   
+  }
+
+  /* --------------- responsive design ------------------- */
+   
+  @media (max-width: 870px) {
+    .menu {
+      display:none;
+    }
+
+    .main_box {
+      display: block;
+    }
 
   
+  }
+
+@media (max-width: 768px) {
+  .categoriesPopup {
+    width: 200px;
+    margin-right: 400px;
+    margin-top: 20px;
+
+  }
+
+  .categoriesPopup ul {
+    justify-content: center;
+  }
+
+  .categoriesPopup li {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .categoriesPopup li {
+    width: 100px; /* Adjust width to fit one item per row */
+  }
+} 
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-left, .footer-links, .footer-contact {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .social-media a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  .ainews1, .ainews2, .ainews3, .ainews4, .ainews5, .ainews6, .ainews7, .ainews8, .cloudComputing1, .cloudComputing2, .cloudComputing3, .cloudComputing4, .cloudComputing5, .cloudComputing6, .cloudComputing7, .cloudComputing8, .cyber1, .cyber2, .cyber3, .cyber4, .cyber5, .cyber6, .cyber7, .cyber8, .blockchain1, .blockchain2, .blockchain3, .blockchain4, .blockchain5, .blockchain6, .blockchain7, .blockchain8, .iot1, .iot2, .iot3, .iot4, .iot5, .iot6, .iot7, .iot8, .miscellaneous1, .miscellaneous2, .miscellaneous3, .miscellaneous4, .miscellaneous5, .miscellaneous6, .miscellaneous7, .miscellaneous8 {
+    width: 450px;
+  }
+}
