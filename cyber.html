@@ -6,6 +6,9 @@
     <title>Cyber Security</title>
     <link rel="stylesheet" href="home.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -14,13 +17,31 @@
         <a href="#">NoMyth</a>
       </div>
       <ul class="menu">
-        <li><a href="home.html" class="fas fa-home"><span> Home</span></a></li>
         <li>
-          <a href="#categories" onclick="toggleCategories(event)" class="fas fa-th-large"><span>Categories</span></a>
+            <a href="home.html">
+                <span class="menu-icon fas fa-home"></span>
+                <span>Home</span>
+            </a>
         </li>
-        <li><a href="hackathons.html" class="fas fa-tools" > <span>Hackathons</span></a></li>
-        <li><a href="courses.html" class="fas fa-book"> <span>Courses</span></a></li>
-      </ul>
+        <li>
+            <a href="#categories" onclick="toggleCategories(event)">
+                <span class="menu-icon fas fa-th-large"></span>
+                <span>Categories</span>
+            </a>
+        </li>
+        <li>
+            <a href="hackathons.html">
+                <span class="menu-icon fas fa-tools"></span>
+                <span>Hackathons</span>
+            </a>
+        </li>
+        <li>
+            <a href="courses.html">
+                <span class="menu-icon fas fa-book"></span>
+                <span>Courses</span>
+            </a>
+        </li>
+    </ul>
       <div class="main_box">
         <input type="checkbox" id="check" />
         <div class="btn_one">
